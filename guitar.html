@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn Guitar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+    }
+    header {
+      background-color: #1e1e1e;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    iframe {
+      width: 100%;
+      height: 315px;
+      margin-bottom: 20px;
+    }
+    .chord {
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e1e1e;
+    }
+    .song {
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+    .lyrics {
+      white-space: pre-wrap;
+      font-size: 14px;
+      color: #cccccc;
+      margin-top: 10px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      background-color: #1e1e1e;
+      border: 1px solid #444;
+      color: #fff;
+    }
+  </style>
+  <script>
+    function filterSongs() {
+      const input = document.getElementById("songSearch").value.toLowerCase();
+      const songs = document.querySelectorAll(".song");
+      songs.forEach(song => {
+        const text = song.innerText.toLowerCase();
+        song.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Learn Guitar</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#videos">Videos</a>
+      <a href="#chords">Chords</a>
+      <a href="#practice">Practice</a>
+      <a href="#songs">Songs</a>
+      <a href="#progress">Progress</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome!</h2>
+    <p>Start your guitar journey here. Learn the basics, practice daily, and grow your skills with guidance from top online teachers.</p>
+  </section>
+
+  <section id="lessons">
+    <h2>Step-by-Step Lessons</h2>
+    <ul>
+      <li>Lesson 1: How to Hold a Guitar</li>
+      <li>Lesson 2: Simple Finger Exercises</li>
+      <li>Lesson 3: First Chords - Em, C, G</li>
+      <li>Lesson 4: Changing Between Chords</li>
+      <li>Lesson 5: Basic Strumming Patterns</li>
+    </ul>
+  </section>
+
+  <section id="videos">
+    <h2>Video Tutorials</h2>
+    <iframe src="https://www.youtube.com/embed/11Cy0iFhN7E" title="Justin Guitar - Beginner Lesson 1" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/2J2V8Th8rbc" title="Marty Music - Basic Chords" allowfullscreen></iframe>
+  </section>
+
+  <section id="chords">
+    <h2>Basic Chords</h2>
+    <div class="chord">
+      <img src="https://www.justinguitar.com/modules/chords/images/em.png" alt="Em chord" width="80" />
+      <p>Em</p>
+    </div>
+    <div class="chord">
+      <img src="https://www.justinguitar.com/modules/chords/images/c.png" alt="C chord" width="80" />
+      <p>C</p>
+    </div>
+    <div class="chord">
+      <img src="https://www.justinguitar.com/modules/chords/images/g.png" alt="G chord" width="80" />
+      <p>G</p>
+    </div>
+  </section>
+
+  <section id="practice">
+    <h2>Daily Practice Tips</h2>
+    <ul>
+      <li>Warm up with finger stretching exercises</li>
+      <li>Practice switching chords for 10 minutes</li>
+      <li>Play along with slow songs</li>
+      <li>Record your progress every week</li>
+    </ul>
+  </section>
+
+  <section id="songs">
+    <h2>Popular Bollywood Songs</h2>
+    <input type="text" id="songSearch" onkeyup="filterSongs()" placeholder="Search songs by name, chord, or level..." />
+
+    <div class="song">
+      <h3>"Tum Hi Ho" - Aashiqui 2 (Beginner)</h3>
+      <p><strong>Chords:</strong> Em, D, C, G</p>
+      <div class="lyrics">
+        Em          D           C         G<br>
+        Tum hi ho... Tum hi ho... Zindagi ab tum hi ho...
+      </div>
+    </div>
+
+    <div class="song">
+      <h3>"Tera Ban Jaunga" - Kabir Singh (Beginner)</h3>
+      <p><strong>Chords:</strong> C, G, Am, F</p>
+      <div class="lyrics">
+        C         G          Am          F<br>
+        Main tera ban jaunga... Main tera ban jaunga...
+      </div>
+    </div>
+
+    <div class="song">
+      <h3>"Jeene Laga Hoon" - Ramaiya Vastavaiya (Beginner)</h3>
+      <p><strong>Chords:</strong> G, C, D, Em</p>
+      <div class="lyrics">
+        G            C            D          Em<br>
+        Jeene laga hoon... pehle se zyada...
+      </div>
+    </div>
+
+    <div class="song">
+      <h3>"Kabira" - Yeh Jawaani Hai Deewani (Intermediate)</h3>
+      <p><strong>Chords:</strong> D, G, A, Bm</p>
+      <div class="lyrics">
+        D           G           A          Bm<br>
+        Kabira maan jaa... Kabira maan jaa...
+      </div>
+    </div>
+
+    <div class="song">
+      <h3>"Pee Loon" - Once Upon a Time in Mumbaai (Intermediate)</h3>
+      <p><strong>Chords:</strong> Am, F, G, Em</p>
+      <div class="lyrics">
+        Am         F            G          Em<br>
+        Pee loon... Tere neele neele naino se shabnam...
+      </div>
+    </div>
+
+    <div class="song">
+      <h3>"Tujhe Kitna Chahne Lage" - Kabir Singh (Intermediate)</h3>
+      <p><strong>Chords:</strong> Bm, G, D, A</p>
+      <div class="lyrics">
+        Bm            G            D         A<br>
+        Tujhe kitna chahne lage hum...
+      </div>
+    </div>
+  </section>
+
+  <section id="progress">
+    <h2>Track Your Progress</h2>
+    <p>Use a notebook or app to mark what you’ve learned each week. Set goals like “learn 3 chords” or “play a full song.”</p>
+    <p>Coming soon: A built-in progress tracker you can use on this site!</p>
+  </section>
+
+  <footer>
+    <p>Created with ❤️ to help you learn guitar. Happy strumming!</p>
+  </footer>
+</body>
+</html>
